@@ -1,0 +1,284 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('img/awan.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px 20px 20px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 90%;
+    max-width: 450px;
+    margin: 20px auto;
+    text-align: center;
+    color: white;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+
+.pencarian {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#input-lokasi {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px 0 0 6px;
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+#input-lokasi::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#icon-cari {
+    width: 42px;
+    height: 42px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #006aff;
+    color: white;
+    border: none;
+    border-radius: 0 6px 6px 0; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.1em;
+}
+
+#icon-cari:hover {
+    background-color: #26436d;
+}
+
+#output-cuaca {
+    padding: 0;
+    text-align: center;
+    min-height: 200px;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.spin {
+    display: inline-block;
+    animation: rotasi 2s linear infinite;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+@keyframes rotasi {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.lokasi {
+    text-align: center;
+    padding: 5px 0 15px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.lokasi i {
+    color: #ffffff;
+    font-size: 1.3em;
+    margin-right: 2px;
+    vertical-align: middle;
+}
+
+.info-cuaca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-cuaca {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 5px;
+}
+
+.suhu {
+    font-size: 4em;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 0 8px #ffffff7c;
+    line-height: 1;
+}
+
+.deskripsi-text {
+    font-size: 1.2em;
+    margin: 5px 0 0;
+    font-weight: 600;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 15px 0;
+}
+
+.info-lainnya {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0 0;
+}
+
+.kelembapan, .kecepatan-angin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.kelembapan p, .kecepatan-angin p {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 5px 0;
+    color: white;
+}
+
+.kelembapan span, .kecepatan-angin span {
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+}
+
+.icon-kelembapan {
+    font-size: 3em;
+    color: #8cffb8;
+}
+
+.icon-kecepatan-angin {
+    font-size: 3em;
+    color: #9ac6ff;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    padding: 20px 0;
+}
+
+.img-error {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.error p {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.ringkas-output-baru {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    padding: 20px 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ringkas-lokasi-atas {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.ringkas-baris-bawah {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.ringkas-icon-baru {
+    width: 85px;
+    height: 85px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.ringkas-suhu-bawah {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+}
+
+
+/* hp */
+@media (max-width: 400px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .suhu {
+        font-size: 3em;
+    }
+
+    .ringkas-suhu-bawah {
+        font-size: 2.2em;
+    }
+
+    .ringkas-icon-baru {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* PC */
+@media (min-width: 768px) {
+    .container {
+        max-width: 500px;
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+}
