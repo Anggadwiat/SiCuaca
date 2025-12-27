@@ -1,7 +1,7 @@
 class BaseCuaca {
     constructor() {
         if (new.target === BaseCuaca) { 
-            throw new Error("BaseCuaca adalah class abstrak dan tidak dapat di-instansiasi");
+            throw new Error("BaseCuaca adalah class abstrak");
         }
     }
 
@@ -153,7 +153,7 @@ class AplikasiCuaca {
     }
 
     async tampilkanCuacaAwal() {
-        this.output.innerHTML = `<p><i class='bx bx-refresh-cw spin'></i>Mencoba mendapatkan lokasi terkini...</p>`;
+        this.output.innerHTML = `<p><i class='bx bx-refresh-cw spin'></i>Mencari lokasi terkini...</p>`;
 
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
@@ -163,7 +163,6 @@ class AplikasiCuaca {
                     
                     const koordinat = `${lat},${lon}`; 
                     
-                    // output tampilan awal
                     const data = await this.api.getCuaca(koordinat, "ringkas"); 
                     
                     if (data) {
@@ -198,7 +197,6 @@ class AplikasiCuaca {
 
         this.output.innerHTML = `<p><i class='bx bx-refresh-cw spin'></i>Mencari...</p>`;
         
-        //ouput hasil pencarian
         const data = await this.api.getCuaca(kota, "lengkap");
 
         if (data) {
@@ -217,4 +215,5 @@ class AplikasiCuaca {
 
 document.addEventListener("DOMContentLoaded", () => {
     new AplikasiCuaca();
+
 });
