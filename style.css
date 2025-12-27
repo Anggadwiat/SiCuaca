@@ -247,8 +247,13 @@ hr {
 }
 
 
-/* hp */
-@media (max-width: 400px) {
+/* Hp */
+@media (max-width: 480px) {
+    body {
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
     .container {
         padding: 15px;
     }
@@ -269,9 +274,14 @@ hr {
         width: 60px;
         height: 60px;
     }
+
+    #output-cuaca {
+        margin-top: 8px;
+    }
 }
 
-/* PC */
+
+/* Ipad */
 @media (min-width: 768px) {
     .container {
         max-width: 500px;
