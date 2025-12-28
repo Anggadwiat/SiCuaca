@@ -149,6 +149,12 @@ class AplikasiCuaca {
 
         this.btn.addEventListener("click", () => this.cari());
 
+        this.input.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+               this.cari();
+            }
+        });
+
         this.tampilkanCuacaAwal();
     }
 
@@ -215,5 +221,4 @@ class AplikasiCuaca {
 
 document.addEventListener("DOMContentLoaded", () => {
     new AplikasiCuaca();
-
 });
